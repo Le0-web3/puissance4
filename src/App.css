@@ -49,6 +49,7 @@ h1 {
   height: var(--height);
   margin: auto;
   border-radius: 3px;
+  box-shadow: 0 0 0.5em 0.2em var(--color6), 0 0 0.4em 0.4em var(--color6);
 }
 
 .case {
