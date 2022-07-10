@@ -24,12 +24,27 @@ const togglePlayer = () => {
   } else {setPlayer(1)}
 }
 
+const getLowestCase = (row, column) => {
+  let newArr = [...pattern];
+  let myRow = row;
+  for(let i=row; i<6-row; i++) {
+    if(newArr[i][column] === 0) {
+      myRow = i;
+      console.log(myRow);
+    }
+  }
+  return myRow;
+}
+
 const handleClick = (i, s) => {
   const row = i;
   const column = s;
   let newArr = [...pattern];
-  if(newArr[row][column] === 0 && row==5 || newArr[row+1][column] !== 0) {
-    newArr[row][column] = player;
+  let lowestRow = row;
+  if(newArr[row][column] === 0) { // if full below
+    lowestRow = getLowestCase(row,column);
+    console.log("lowestRow : ",lowestRow)
+    newArr[lowestRow][column] = player;
     setPattern(newArr);
     togglePlayer();
   }
