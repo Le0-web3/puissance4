@@ -70,8 +70,8 @@ h1 {
   width: var(--casedim);
   text-align: center;
   border-radius: 10%;
-  color: var(--color5);
-  background-color: var(--color4);
+  color: var(--color4);
+  background-color: var(--color5);
   box-shadow: 0 0 0.5em 0.2em var(--color3), 0 0 0.4em 0.4em var(--color1);
   transition: color .3s, background-color .2s, box-shadow .25s; /* Animation */
   grid-area: reset;
